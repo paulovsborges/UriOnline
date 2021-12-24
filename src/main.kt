@@ -64,4 +64,50 @@ class Initial {
         println("average = $average")
 
     }
+
+    fun ex1006() {
+
+        val grades = mutableListOf<Double>()
+
+        val a = readLine()?.toDouble()
+        val b = readLine()?.toDouble()
+        val c = readLine()?.toDouble()
+
+        if (a != null && b != null && c != null) {
+            grades.add(a)
+            grades.add(b)
+            grades.add(c)
+
+            val sum = (a + b + c) / grades.size
+            println(sum)
+
+        } else {
+            println("invalid values")
+        }
+    }
+
+    fun ex1007() {
+
+        val a = readLine()?.toInt()!!
+        val b = readLine()?.toInt()!!
+        val c = readLine()?.toInt()!!
+        val d = readLine()?.toInt()!!
+
+        val diff = ((a * b) - (c * d))
+        println("difference = $diff")
+    }
+
+    fun ex1008() {
+
+        val employeeNumber = readLine()
+        val workedHours = readLine()?.toInt()
+        val receivedPerHour = readLine()?.toDouble()
+
+        var test: Triple<String, Int, Double> = Triple(employeeNumber!!, workedHours!!, receivedPerHour!!)
+
+        val sum  = test.third * test.second
+        println("number  = ${test.first}")
+        println("salary  = U$ $sum")
+
+    }
 }
