@@ -11,7 +11,7 @@ class Initial {
         val a = readLine()
         val b = readLine()
 
-        var x = a!!.toInt() + b!!.toInt()
+        val x = a!!.toInt() + b!!.toInt()
 
         println(x)
 
@@ -103,7 +103,7 @@ class Initial {
         val workedHours = readLine()?.toInt()
         val receivedPerHour = readLine()?.toDouble()
 
-        var test: Triple<String, Int, Double> = Triple(employeeNumber!!, workedHours!!, receivedPerHour!!)
+        val test: Triple<String, Int, Double> = Triple(employeeNumber!!, workedHours!!, receivedPerHour!!)
 
         val sum  = test.third * test.second
         println("number  = ${test.first}")
