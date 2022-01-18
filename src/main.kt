@@ -2,6 +2,8 @@ fun main() {
 
     val initial = Initial()
 
+    initial.ex1009()
+
 }
 
 class Initial {
@@ -109,5 +111,23 @@ class Initial {
         println("number  = ${test.first}")
         println("salary  = U$ $sum")
 
+    }
+
+    fun ex1009(){
+
+        println("enter your name:")
+        val name = readLine()
+        println("how much do you receive per month?")
+        val salary = readLine()?.toDouble()
+        println("how much did you sell this month?")
+        val totalSold = readLine()?.toDouble()
+
+        if(salary != null && totalSold != null ){
+
+            val share = salary + totalSold * 0.15
+            println(share)
+
+
+        }
     }
 }
