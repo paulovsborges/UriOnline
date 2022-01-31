@@ -1,8 +1,10 @@
+import kotlin.math.abs
+
 fun main() {
 
     val initial = Initial()
 
-    initial.ex1012()
+    initial.ex1013()
 
 }
 
@@ -134,7 +136,7 @@ class Initial {
 
         var repeat = true
 
-        var list : Triple<Int, Int, Double>
+        var list: Triple<Int, Int, Double>
 
         var total = 0.0
 
@@ -160,9 +162,9 @@ class Initial {
 
             repeat = newChoice
 
-            if(repeat){
+            if (repeat) {
                 continue
-            }else{
+            } else {
 
                 val formattedValue = String.format("%.2f", total)
 
@@ -173,7 +175,7 @@ class Initial {
         }
     }
 
-    fun ex1011 (){
+    fun ex1011() {
 
         println("insert the radius")
         val radius = readLine()?.toInt()!!.toExponential(3)
@@ -187,11 +189,11 @@ class Initial {
 
     }
 
-    fun ex1012(){
+    fun ex1012() {
 
         val a = readLine()?.toDouble()!!
-        val b =readLine()?.toDouble()!!
-        val c =readLine()?.toDouble()!!
+        val b = readLine()?.toDouble()!!
+        val c = readLine()?.toDouble()!!
         val pi = 3.14159
 
         println("Question A:")
@@ -219,5 +221,19 @@ class Initial {
         val rectangle = a * b
 
         println("the area of the rectangle  is ${rectangle.formatDecimal(3)}")
+    }
+
+    fun ex1013() {
+
+        val a = readLine()?.toInt()!!
+        val b = readLine()?.toInt()!!
+        val c = readLine()?.toInt()!!
+
+        val n = (a + b + abs(a-b)) / 2
+
+        val n2 = (n + c + abs(n - c)) / 2
+
+        println("the biggets number is $n2")
+
     }
 }
