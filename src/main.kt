@@ -2,7 +2,7 @@ fun main() {
 
     val initial = Initial()
 
-    initial.ex1011()
+    initial.ex1012()
 
 }
 
@@ -185,5 +185,39 @@ class Initial {
 
         String.format("%.3f", volume).let(::println)
 
+    }
+
+    fun ex1012(){
+
+        val a = readLine()?.toDouble()!!
+        val b =readLine()?.toDouble()!!
+        val c =readLine()?.toDouble()!!
+        val pi = 3.14159
+
+        println("Question A:")
+        println("Area of the triangle rectangle is ${((a * c) / 2).formatDecimal(3)}")
+
+        println("Question B")
+
+        val radius = c.toInt().toExponential(2).toDouble()
+        val area = pi * radius
+
+        println("the radius circle area is ${area.formatDecimal(3)}")
+
+        println("Question C")
+
+        val trapeziumArea = ((a + b) * c) / 2
+        println("The trapezium area is ${trapeziumArea.formatDecimal(3)}")
+
+        println("Question D")
+
+        val square = b.toInt().toExponential(2)
+        println("the area  of the square is ${square.toDouble().formatDecimal(3)}")
+
+        println("Question C")
+
+        val rectangle = a * b
+
+        println("the area of the rectangle  is ${rectangle.formatDecimal(3)}")
     }
 }
