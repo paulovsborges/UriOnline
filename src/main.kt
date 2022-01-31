@@ -2,7 +2,7 @@ fun main() {
 
     val initial = Initial()
 
-    initial.ex1010()
+    initial.ex1011()
 
 }
 
@@ -164,10 +164,26 @@ class Initial {
                 continue
             }else{
 
+                val formattedValue = String.format("%.2f", total)
+
                 list2.forEach(::println)
-                println(total)
+                println(formattedValue)
                 break
             }
         }
+    }
+
+    fun ex1011 (){
+
+        println("insert the radius")
+        val radius = readLine()?.toInt()!!.toExponential(3)
+
+        val pi = 3.14159
+        val n1 = 4 / 3.0
+
+        val volume = n1 * pi * radius
+
+        String.format("%.3f", volume).let(::println)
+
     }
 }
