@@ -2,7 +2,7 @@ fun main() {
 
     val initial = Initial()
 
-    initial.ex1009()
+    initial.ex1010()
 
 }
 
@@ -107,13 +107,13 @@ class Initial {
 
         val test: Triple<String, Int, Double> = Triple(employeeNumber!!, workedHours!!, receivedPerHour!!)
 
-        val sum  = test.third * test.second
+        val sum = test.third * test.second
         println("number  = ${test.first}")
         println("salary  = U$ $sum")
 
     }
 
-    fun ex1009(){
+    fun ex1009() {
 
         println("enter your name:")
         val name = readLine()
@@ -122,12 +122,52 @@ class Initial {
         println("how much did you sell this month?")
         val totalSold = readLine()?.toDouble()
 
-        if(salary != null && totalSold != null ){
+        if (salary != null && totalSold != null) {
 
             val share = salary + totalSold * 0.15
             println(share)
 
+        }
+    }
 
+    fun ex1010() {
+
+        var repeat = true
+
+        var list : Triple<Int, Int, Double>
+
+        var total = 0.0
+
+        val list2 = mutableListOf<Triple<Int, Int, Double>>()
+
+        while (repeat) {
+
+            println("product code:")
+            val productCode = readLine()?.toInt()!!
+
+            println("product amount:")
+            val productAmount = readLine()?.toInt()!!
+
+            println("unit price:")
+            val productPrice = readLine()?.toDouble()!!
+
+            list = Triple(productCode, productAmount, productPrice)
+            list2.add(list)
+
+            total += productPrice * productAmount
+
+            val newChoice = readLine()?.toBoolean() ?: false
+
+            repeat = newChoice
+
+            if(repeat){
+                continue
+            }else{
+
+                list2.forEach(::println)
+                println(total)
+                break
+            }
         }
     }
 }
