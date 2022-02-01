@@ -4,7 +4,7 @@ fun main() {
 
     val initial = Initial()
 
-    initial.ex1013()
+    initial.ex1015()
 
 }
 
@@ -236,4 +236,34 @@ class Initial {
         println("the biggets number is $n2")
 
     }
+
+    fun ex1014(){
+
+        val x = readLine()!!.toInt()
+        val y = readLine()!!.toDouble()
+
+        val result = x / y
+
+        println("${result.formatDecimal(3)} km/l")
+
+    }
+
+    fun ex1015(){
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
