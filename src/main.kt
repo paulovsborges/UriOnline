@@ -1,4 +1,5 @@
 import kotlin.math.abs
+import kotlin.math.sqrt
 
 fun main() {
 
@@ -229,7 +230,7 @@ class Initial {
         val b = readLine()?.toInt()!!
         val c = readLine()?.toInt()!!
 
-        val n = (a + b + abs(a-b)) / 2
+        val n = (a + b + abs(a - b)) / 2
 
         val n2 = (n + c + abs(n - c)) / 2
 
@@ -237,7 +238,7 @@ class Initial {
 
     }
 
-    fun ex1014(){
+    fun ex1014() {
 
         val x = readLine()!!.toInt()
         val y = readLine()!!.toDouble()
@@ -248,8 +249,19 @@ class Initial {
 
     }
 
-    fun ex1015(){
+    fun ex1015() {
 
+        val x1 = readLine()!!.toDouble()
+        val y1 = readLine()!!.toDouble()
+        val x2 = readLine()!!.toDouble()
+        val y2 = readLine()!!.toDouble()
+
+        val x = (x2 - x1).toExponential(2)
+        val y = (y2 - y1).toExponential(2)
+
+        val result = (x + y).let(::sqrt)
+
+        println(result.formatDecimal(4))
 
     }
 }
